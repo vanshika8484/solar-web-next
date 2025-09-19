@@ -81,7 +81,7 @@ const aboutUsContent = [
       "We empower communities to control their energy future.",
       "We act on our mission to build a better, solar-powered India.",
     ],
-    img: "/Images/im1.webp",
+    img: "/Images/img4.webp",
     alt: "Government officials and solar technicians inspecting installation",
   },
 ];

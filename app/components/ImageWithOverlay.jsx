@@ -11,10 +11,11 @@ const ImageWithOverlay = () => {
         transition={{ duration: 0.5 }}
       >
         <Image
-          src="/images/Team.webp" // Use lowercase 'images' if in public folder
+          src="/Images/Team.webp" // Use lowercase 'images' if in public folder
           alt="banner"
           fill // fills parent container
           style={{ objectFit: "cover" }}
+          priority
         />
       </motion.div>
 

@@ -55,7 +55,7 @@ const aboutUsContent = [
       "Be it a home, farm, or school our mission is to light it up, cleanly and reliably.",
       "We believe clean energy is a right, not a luxury.",
     ],
-    img: "/Images/Img2.webp",
+    img: "/Images/img2.webp",
     alt: "Solar panels on rooftops and rural homes",
   },
   {
@@ -68,7 +68,7 @@ const aboutUsContent = [
       "We focus on doing what’s right, not just what sells.",
       "Our client relationships last because we deliver consistent results.",
     ],
-    img: "/Images/Img3.webp",
+    img: "/Images/img3.webp",
     alt: "Old and new solar projects representing legacy and evolution",
   },
   {

@@ -48,25 +48,42 @@
 /* Image container */
 .image-container {
   width: 100%;
-  max-width: 320px;
-  height: 160px;
+  max-width: 100%;
+  height: auto;
+  min-height: 180px;
+  aspect-ratio: 16/9;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-  .image-container {
-    height: 192px;
-  }
+  background-color: #f0f0f0; /* Fallback background color */
+  position: relative;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+@media (min-width: 640px) {
+  .image-container {
+    max-width: 400px;
+    min-height: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    max-width: 320px;
+    min-height: 200px;
+  }
+}
+
+/* Moved image styles to be with container for better organization */
 
 /* Text section */
 .text-content {

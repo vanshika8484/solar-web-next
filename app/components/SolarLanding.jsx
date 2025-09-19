@@ -284,9 +284,11 @@ export default function SolarLanding() {
             <div className="flex justify-between items-center p-5 border-b">
               <Link href="/">
                 <Image
-                  src={solarlogo}
+                  src="/Images/logo2.webp"
                   alt="Logo"
-                  className="w-12 h-12 object-contain"
+                  width={48}
+                  height={48}
+                  className="object-contain"
                 />
               </Link>
               <button

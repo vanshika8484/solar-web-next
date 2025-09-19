@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-// import solarlogo from "../Images/logo3.webp";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 

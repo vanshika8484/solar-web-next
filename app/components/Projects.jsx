@@ -44,8 +44,8 @@ const Projects = () => {
   return (
     <>
       {/* Projects Listing */}
-      <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-20 xl:px-32 2xl:px-52">
-        <h1 className="text-4xl font-bold text-center mt-14 text-green-800 mb-10">
+      <section className=" px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-0 xl:px-32 2xl:px-32">
+        <h1 className="text-5xl font-bold text-center mt-2 text-green-800 mb-10">
           <span className="text-black">Our </span>Projects
         </h1>
 
@@ -180,24 +180,13 @@ const Projects = () => {
               Why Choose Us
             </span>
           </div>
-          <motion.h1
-            className="font-montserrat font-semibold text-4xl leading-tight text-gray-900 mb-4"
-            animate={{
-              y: [0, -8, 0, 8, 0],
-              scale: [1, 1.05, 1, 1.05, 1],
-              rotate: [0, -1, 1, -1, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
+          <h1
+            className="font-montserrat font-semibold text-4xl leading-tight text-gray-900 mb-4">
             We Provide Solar
             <br /> Solutions
             <br /> as per your
             <br /> Requirements
-          </motion.h1>
+          </h1>
           <p className="text-gray-500 text-sm max-w-md mb-8 leading-relaxed">
             At Divy Power, our mission is not just to install solar systems, but
             to create a lasting impact through sustainable energy solutions.
@@ -219,15 +208,17 @@ const Projects = () => {
       <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-gray-50 rounded-xl shadow-sm my-10">
         <Gallery />
       </section>
-      <section>
+      <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-white rounded-xl shadow-sm my-10">
         <InfiniteTiltSlider />
       </section>
-      <section>
+      <section className="-mt-20">
         <BlackWhiteGallery />
       </section>
 
       {/* Footer */}
+    <section className="mt-2">
       <Footer />
+    </section>
     </>
   );
 };

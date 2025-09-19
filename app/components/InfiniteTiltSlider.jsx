@@ -1,8 +1,7 @@
-import React from "react";
-import { motion  } from "@/app/utils/motion";
-import Image from "next/image";
+"use client";
 
-// All images
+import { ThreeDMarquee } from "@/components/ui/3d-marquee";
+
 const images = [
   "/Images/W1.webp",
   "/Images/W2.webp",
@@ -38,65 +37,11 @@ const images = [
   "/Images/W32.webp",
 ];
 
-// Split images into 3 sets
-const col1Images = images.slice(0, 11);
-const col2Images = images.slice(11, 22);
-const col3Images = images.slice(22, 32);
-
-// Single column with infinite scroll
-const Column = ({ images, direction = "down", speed = 20 }) => {
-  return (
-    <motion.div
-      className="flex flex-col gap-3"
-      animate={{
-        y: direction === "down" ? ["-50%", "0%"] : ["0%", "-50%"],
-      }}
-      transition={{
-        repeat: Infinity,
-        ease: "linear",
-        duration: speed,
-      }}
-    >
-      {[...images, ...images].map((src, i) => (
-        <div
-          key={i}
-          className="
-            w-[140px] h-[80px]        /* mobile */
-            sm:w-[160px] sm:h-[90px]  /* small screens */
-            md:w-[200px] md:h-[100px] /* tablets */
-            lg:w-[220px] lg:h-[110px] /* desktops */
-            bg-gray-800 rounded-lg overflow-hidden shadow-md
-          "
-          style={{
-            transform: "rotateX(8deg) rotateY(-8deg) skewX(-4deg)",
-          }}
-        >
-          <Image
-            src={src}
-            fill
-            alt={`Image ${i + 1}`}
-            className="w-full h-full object-cover opacity-90 hover:opacity-100 transition"
-          />
-        </div>
-      ))}
-    </motion.div>
-  );
-};
-
 export default function InfiniteTiltSlider() {
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-white px-4">
-      {/* Responsive Box */}
-      <div
-        className="bg-neutral-900 rounded-xl shadow-xl p-4 overflow-hidden border border-gray-700 
-                      w-full max-w-[820px] h-[70vh] sm:h-[650px]"
-      >
-        {/* Grid: 2 cols on mobile → 3 cols on large */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center">
-          <Column images={col1Images} direction="down" speed={150} />
-          <Column images={col2Images} direction="up" speed={150} />
-          <Column images={col3Images} direction="down" speed={150} />
-        </div>
+    <div>
+      <div className="mx-auto my-2 max-w-7xl rounded-3xl bg-black p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
+        <ThreeDMarquee images={images} />
       </div>
     </div>
   );

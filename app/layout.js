@@ -11,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="icon" href="/Images/logo3.webp" type="image/webp" />
+        <link rel="apple-touch-icon" href="/Images/logo3.webp" type="image/webp" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
       <body>
         <Cursor />

@@ -25,10 +25,10 @@ const services = [
 
 const FourService = () => {
   return (
-    <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2 mt-0 lg:mt-20 md:mt-20 xl:mt-20 2xl:mt-20">
+    <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2">
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-6 pt-12">
-        <h2 className="text-3xl font-bold text-center text-black mb-10">
+        <h2 className="text-4xl font-bold text-center text-black mb-10">
           {" "}
           Our Services
         </h2>

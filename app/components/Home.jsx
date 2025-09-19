@@ -97,20 +97,21 @@ function Home() {
         <Conversation />
       </section>
 
-      <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
-        {/* <ChartCard /> */}
-      </section>
-      <section className="About mt-24">
-        <SolarCostCalculator />
-      </section>
+      <section
+          className="mt-20 px-4 sm:px-6 lg:px-12 relative"
+          style={{ transform: "translateY(-450px)" }}
+        >
+          <SolarCostCalculator />
+          <div className="flex justify-center mt-10">
+            <Link href="/contact">
+              <button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-4 px-8 sm:px-10 rounded-full text-base sm:text-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                Adhik jaankari ke liye click krein
+              </button>
+            </Link>
+          </div>
+        </section>
 
-      <section className=" h-72">
-        <div className="text-center About1  py-6 mb-10  mt-[600px] lg:-mt-48 xl:-mt-28 2xl:-mt-24 md:-mt-56 ">
-          <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
-            <Link href="./contact">Adhik jaankari ke liye click krein</Link>
-          </button>
-        </div>
-      </section>
+         
 
       <section className="About">
         <SolarSolutions />

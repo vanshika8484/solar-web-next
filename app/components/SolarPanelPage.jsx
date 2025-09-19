@@ -57,7 +57,7 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
           variants={fadeUp}
           className="text-center py-10"
         >
-          <h1 className="text-4xl font-bold">Solar Solutions</h1>
+          <h1 className="text-5xl font-bold -mt-20 -mb-6">Solar Solutions</h1>
         </motion.header>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 pb-16">

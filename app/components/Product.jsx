@@ -92,7 +92,7 @@ function Product() {
             {/* Heading */}
             <div className="relative z-10">
               <motion.h1
-                className="text-4xl font-bold text-black mb-2"
+                className="text-5xl font-bold text-black -mb-8 -mt-10"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}

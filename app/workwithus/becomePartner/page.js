@@ -1,5 +1,6 @@
-import BecomePartner from "@/app/components/BecomePartner";
+import BecomeOurIndividualPartner from "@/app/components/BecomeOurIndividualPartner";
+
 
 export default function Page() {
-  return <BecomePartner />;
+  return <BecomeOurIndividualPartner />;
 }

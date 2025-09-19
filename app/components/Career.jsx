@@ -52,21 +52,18 @@ const Career = () => {
         animate="visible"
         className="text-center mb-12"
       >
-        <motion.h1
-          variants={heroTextVariants}
-          animate={["visible", "float"]}
+        <h1
           className="text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl mb-4"
         >
           Join <span className="text-green-800">with us</span>
-        </motion.h1>
-        <motion.p
-          variants={heroTextVariants}
-          animate={["visible", "float"]}
+        </h1>
+        <p
+          
           className="max-w-xl mx-auto text-xl text-gray-600"
         >
           We're building the future with talented people like you. Explore our
           open positions below.
-        </motion.p>
+        </p>
       </motion.div>
 
       <section>

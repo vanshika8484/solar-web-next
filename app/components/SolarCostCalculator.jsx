@@ -61,14 +61,14 @@ const SolarCostCalculator = () => {
 
   return (
     <motion.div
-      className="bg-[#F8F7F0] h-[600px] GetFontSol px-4 md:px-10 lg:px-16 py-10"
+      className="bg-[#F8F7F0] h-[600px] GetFontSol mt-70 px-4 md:px-10 lg:px-16 py-10"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <motion.div className="text-center mb-8 " variants={cardVariants}>
-        <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
+      <motion.div className="text-center mb-4 " variants={cardVariants}>
+        <h1 className="text-xl sm:text-xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
           Aaj hi Solar Lagwao, environment bachao <br />
           aur agle 5 saal me 3 lakh se jyada apne electricity bills par bhi Bachao
         </h1>

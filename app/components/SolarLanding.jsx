@@ -83,7 +83,7 @@ const navLinks = [
     dropdown: [
       {
         name: "Become our Dealer",
-        path: "/workwithus/becomeIndividual",
+        path: "/workwithus",
         icon: <FaHandshake />,
       },
       {
@@ -93,7 +93,7 @@ const navLinks = [
       },
       {
         name: "Add Our Services to Your Existing Business",
-        path: "workwithus/addOurServices",
+        path: "/workwithus/addOurServices",
         icon: <FaBriefcase />,
       },
     ],

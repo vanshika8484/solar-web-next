@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-container { margin: 20px 0; }
+        img { max-width: 300px; height: auto; display: block; margin: 10px 0; border: 1px solid #ccc; }
+        .path { font-family: monospace; color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    
+    <div class="image-container">
+        <h2>Chacha Avatar</h2>
+        <div class="path">Path: /Images/chacha.webp</div>
+        <img src="/Images/chacha.webp" alt="Chacha Avatar" onerror="this.onerror=null; this.alt='Image failed to load';">
+    </div>
+    
+    <div class="image-container">
+        <h2>Didi Avatar</h2>
+        <div class="path">Path: /Images/didi.webp</div>
+        <img src="/Images/didi.webp" alt="Didi Avatar" onerror="this.onerror=null; this.alt='Image failed to load';">
+    </div>
+</body>
+</html>

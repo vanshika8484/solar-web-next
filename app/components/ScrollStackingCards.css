@@ -1,0 +1,141 @@
+.cards-container {
+  position: relative;
+  padding: 160px 0;
+}
+
+.cards-container {
+  position: relative;
+  padding: 200px 0;
+}
+
+/* Each card */
+.card {
+  position: sticky;
+  top: 20%;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 2rem;
+  padding-top: 5rem;
+  background: #f8f9fb;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+  z-index: 6;
+  opacity: 1;
+}
+
+/* Reverse layout for even cards */
+.card.reverse {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .card.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Image container */
+.image-container {
+  width: 100%;
+  max-width: 320px;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .image-container {
+    height: 192px;
+  }
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text section */
+.text-content {
+  flex: 1;
+}
+
+.text-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #065f46;
+  margin-bottom: 0.5rem;
+}
+
+.text-content h4 {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.text-content ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+
+.text-content ul li {
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+/* Scroll behavior */
+.card.inactive {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+
+/* Stacking behavior */
+.card:nth-child(1):not(.stacked) {
+  transform: translateY(-100px);
+  z-index: 2;
+}
+.card:nth-child(2):not(.stacked) {
+  transform: translateY(-70px);
+  z-index: 3;
+}
+.card:nth-child(3):not(.stacked) {
+  transform: translateY(-40px);
+  z-index: 4;
+}
+.card:nth-child(4):not(.stacked) {
+  transform: translateY(-40px);
+  z-index: 5;
+}
+
+/* Scroll behavior */
+.card.inactive {
+  opacity: 1;
+  transform: scale(0.98);
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}

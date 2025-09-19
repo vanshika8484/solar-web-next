@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import "./ScrollStackingCards.css";
 
 const ScrollStackingCards = ({ content }) => {
@@ -49,7 +50,14 @@ const ScrollStackingCards = ({ content }) => {
           className={`card ${i % 2 !== 0 ? "reverse" : ""}`}
         >
           <div className="image-container">
-            <img src={card.img} alt={card.alt} />
+            <Image
+              src={card.img}
+              alt={card.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="image"
+              priority={i < 2} // Only preload first 2 images
+            />
           </div>
           <div className="text-content">
             <h3 className="About">{card.heading}</h3>

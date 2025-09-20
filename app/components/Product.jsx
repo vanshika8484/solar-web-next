@@ -328,7 +328,7 @@ function Product() {
         </div>
       </div>
 
-      <section className="mt-[2900px]">
+      <section className="lg:mt-[2700px] md:mt-[2800px] mt-1300">
         <Footer />
       </section>
     </div>

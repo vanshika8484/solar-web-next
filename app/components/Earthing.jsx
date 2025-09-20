@@ -60,20 +60,20 @@ const Earthing = () => {
                             animate="visible"
                             variants={fadeUp}
                             src="https://divyby.redspace.in/assets/images/updated-images/img2%20%20earthing.png"
-                            alt="Solar Panels Field"
-                            className="w-full h-auto rounded shadow"
+                            alt="Earthing Installation"
+                            className="w-full max-w-[380px] h-auto rounded shadow"
                         />
-
                         <motion.section
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
+                            className="w-full mt-6"
                         >
-                            <p className=' text-gray-500'>
-                               Meeting stringent safety and industry standards, our earthing solutions are built for long-term durability and efficiency. We use high-grade conductors, robust grounding rods, and expertly designed layouts to enhance conductivity and minimize resistance. Whether for residential buildings or large-scale industrial plants, our installations are tailored to provide optimal protection and compliance with regulatory requirements.
+                            <p className="text-gray-500">
+                                Meeting stringent safety and industry standards, our earthing solutions are built for long-term durability and efficiency. We use high-grade conductors, robust grounding rods, and expertly designed layouts to enhance conductivity and minimize resistance. Whether for residential buildings or large-scale industrial plants, our installations are tailored to provide optimal protection and compliance with regulatory requirements.
                             </p>
                             <p className="mt-4 text-gray-500">
-                                Beyond technical excellence, we focus on delivering cost-effective and maintenance-friendly earthing systems. Our solutions not only enhance safety but also contribute to the longevity of electrical equipment, reducing repair costs and downtime. With Divy Power’s expertise, customers can enjoy peace of mind knowing their electrical systems are reinforced with dependable and high-performance earthing solutions.
+                                Beyond technical excellence, we focus on delivering cost-effective and maintenance-friendly earthing systems. Our solutions not only enhance safety but also contribute to the longevity of electrical equipment, reducing repair costs and downtime. With Divy Power's expertise, customers can enjoy peace of mind knowing their electrical systems are reinforced with dependable and high-performance earthing solutions.
                             </p>
                         </motion.section>
 

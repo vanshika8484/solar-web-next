@@ -39,7 +39,7 @@ const SolarPumpPage = () => {
               variants={fadeUp}
               src="/Images/IMG-20250805-WA0071(1).webp"
               alt="Solar Panel Installation"
-              className="w-full h-auto rounded shadow"
+              className="w-full h-[140px] rounded shadow"
             />
 
             <motion.section
@@ -68,21 +68,22 @@ const SolarPumpPage = () => {
                 independent water management solutions.
               </p>
             </motion.section>
-            <div className="flex items-start gap-6">
+            <div className="flex flex-col md:flex-row items-start gap-6">
               <motion.img
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
                 src="/Images/PHOTO-2025-08-18-12-28-23.webp"
-                className="w-[380px] h-[270px] rounded shadow"
+                className="w-[380px] h-[240px] rounded shadow"
               />
 
               <motion.section
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
+                className="w-full"
               >
-                <p className="  text-gray-500">
+                <p className="mt-4 md:mt-0 text-gray-500">
                   One of the standout advantages of these solar pumps is their
                   minimal maintenance requirement. Built with durable components
                   and advanced technology, they demand little upkeep, making

@@ -100,21 +100,22 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
             </motion.section>
 
             {/* Side Image + Paragraph */}
-            <div className="flex items-start gap-6">
+            <div className="flex flex-col md:flex-row items-start gap-6">
               <motion.img
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
                 src="/Images/PHOTO-2025-08-18-12-28-23.webp"
                 alt="Solar Panels Field"
-                className="w-[380px] h-[270px] rounded shadow"
+                className="w-full md:w-[380px] h-auto md:h-[270px] rounded shadow object-cover"
               />
               <motion.section
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
+                className="w-full md:pt-0 md:-mt-4"
               >
-                <p className=" text-gray-500">
+                <p className="mt-4 text-gray-500">
                   Longevity and durability are at the core of our solar panel
                   offerings. Built to withstand harsh weather conditions and
                   maintain consistent output over years of use, our panels

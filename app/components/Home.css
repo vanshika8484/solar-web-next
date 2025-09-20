@@ -75,3 +75,32 @@ video:fullscreen {
   width: 100vw;
   height: 100vh;
 }
+@media (min-width: 401px) and (max-width: 530px) {
+  .move-down-200 {
+    margin-top: 200px;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 401px) {
+  .move-down-300 {
+    margin-top: 300px;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 350px) {
+  .move-down-350 {
+    margin-top: 400px;
+  }
+}
+
+@media (min-width: 251px) and (max-width: 301px) {
+  .move-down-500 {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width: 201px) and (max-width: 251px) {
+  .move-down-600 {
+    margin-top: 700px;
+  }
+}

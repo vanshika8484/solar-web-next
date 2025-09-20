@@ -85,7 +85,7 @@ function Home() {
 
   return (
     <div className=" relative  max-w-full  mx-auto">
-      <ChatbotToggle />
+      {/* <ChatbotToggle /> */}
       <div>
         <section className="About">
           <FullScreenVideo />
@@ -102,7 +102,7 @@ function Home() {
           style={{ transform: "translateY(-450px)" }}
         >
           <SolarCostCalculator />
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-190 lg:-mt-20">
             <Link href="/contact">
               <button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-4 px-8 sm:px-10 rounded-full text-base sm:text-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                 Adhik jaankari ke liye click krein
@@ -112,11 +112,13 @@ function Home() {
         </section>
 
          
-
-      <section className="About">
-        <SolarSolutions />
-      </section>
-      <section className=" mt-20 About1">
+        <section
+          className="About px-4 sm:px-8 lg:px-12"
+          style={{ transform: "translateY(-250px)" }}
+        >
+          <SolarSolutions />
+        </section>
+      <section className=" -mt-30 About1">
         <ContactForm />
       </section>
 

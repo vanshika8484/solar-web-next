@@ -81,7 +81,7 @@ const SolarSolutions = () => {
   };
 
   return (
-    <main className="bg-white text-black max-w-7xl mx-auto p-6 sm:p-10 -mt-106">
+    <main className="bg-white text-black max-w-7xl mx-auto p-6 sm:p-10 -mt-36">
       {/* Top Section */}
       <motion.section
         className="flex flex-col lg:flex-row items-center justify-center gap-10"

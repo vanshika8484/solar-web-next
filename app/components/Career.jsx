@@ -1,21 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { lazy, Suspense } from "react";
+import Footer from "./Footer";
+import CareerForm from "./CareerForm";
+import WorkCultureReels from "./WorkCultureReels";
+import SafetySecurityReels from "./SafetySecurityReels";
+import ImageSlider from "./ImageSlider";
+import CareersAtDivySolar from "./CareersAtDivySolar";
 
-const Footer = lazy(() => import("./Footer"));
-const CareerForm = lazy(() => import("./CareerForm"));
-const WorkCultureReels = lazy(() => import("./WorkCultureReels"));
-const SafetySecurityReels = lazy(() => import("./SafetySecurityReels"));
-const ImageSlider = lazy(() => import("./ImageSlider"));
-const CareersAtDivySolar = lazy(() => import("./CareersAtDivySolar"));
-
-// LazyLoad wrapper
-const LazyLoadSection = ({ children, fallback }) => (
-  <Suspense fallback={<div className="text-center py-10">{fallback}</div>}>
-    {children}
-  </Suspense>
-);
 
 // Hero text animation
 const heroTextVariants = {
@@ -66,17 +58,23 @@ const Career = () => {
         </p>
       </motion.div>
 
-      <section>
-        <LazyLoadSection fallback="Loading Careers...">
-          <CareersAtDivySolar />
-        </LazyLoadSection>
-      </section>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <CareersAtDivySolar />
+      </motion.section>
 
-      <section className="-mt-8">
-        <LazyLoadSection fallback="Loading Form...">
-          <CareerForm />
-        </LazyLoadSection>
-      </section>
+      <motion.section 
+        className="-mt-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <CareerForm />
+      </motion.section>
 
       {/* Internal Team Button */}
       <section className="flex justify-center mt-8">
@@ -191,28 +189,38 @@ const Career = () => {
       </motion.div>
 
       {/* Reels Sections */}
-      <section className="-mt-12">
-        <LazyLoadSection fallback="Loading Work Culture...">
-          <WorkCultureReels />
-        </LazyLoadSection>
-      </section>
+      <motion.section 
+        className="-mt-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <WorkCultureReels />
+      </motion.section>
 
-      <section>
-        <LazyLoadSection fallback="Loading Safety & Security...">
-          <SafetySecurityReels />
-        </LazyLoadSection>
-      </section>
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <SafetySecurityReels />
+      </motion.section>
 
-      <section>
-        <LazyLoadSection fallback="Loading Gallery...">
-          <ImageSlider />
-        </LazyLoadSection>
-      </section>
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <ImageSlider />
+      </motion.section>
 
       <section className="mt-[150px] mb-[-50px]">
-        <LazyLoadSection fallback="Loading Footer...">
+      
           <Footer />
-        </LazyLoadSection>
+      
       </section>
     </div>
   );

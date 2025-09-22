@@ -4,26 +4,32 @@ import { FaPlay, FaPause } from "react-icons/fa"; // Icons
 const reelsData = [
   {
     role: "Solar Specialist",
+    image:"/Images/a3.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670986/Asha_Growth_At_Divy_rm8u7t.mp4",
   },
   {
     role: "Solar Specialist",
+    image:"/Images/a4.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Kaushlesh_Growth_At_Divy_l4rdbm.mp4",
   },
   {
     role: "Solar Specialist",
+    image:"/Images/a5.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Rishika_Growth_At_Divy_xog75t.mp4",
   },
   {
     role: "Solar Specialist",
+    image:"/Images/a6.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Riddhi_Growth_At_Divy_mfjyez.mp4",
   },
   {
     role: "Solar Specialist",
+    image:"/Images/a7.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Kaushlesh_Singh_Growth_At_Divyy_emjd0y.mp4",
   },
   {
     role: "Solar Specialist",
+    image:"/Images/a8.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670988/Shruti_Growth_At_Divy_tfpcmy.mp4",
   },
 ];
@@ -68,8 +74,19 @@ const HoverVideoCard3 = () => {
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
+                  poster={reel.image}
                   className="w-full aspect-[9/16] object-cover"
                   playsInline
+                  onLoadStart={() => {
+                    // Ensure poster is shown when video starts loading
+                    const video = videoRefs.current[index];
+                    if (video) video.poster = reel.image;
+                  }}
+                  onCanPlay={() => {
+                    // Hide poster when video is ready to play
+                    const video = videoRefs.current[index];
+                    if (video) video.poster = '';
+                  }}
                 />
                 <button
                   onClick={() => handlePlayPause(index)}

@@ -4,26 +4,32 @@ import { FaPlay, FaPause } from "react-icons/fa"; // Play / Pause icons
 const reelsData = [
   {
     role: "Employees Are Our Partners",
+    image:"/Images/a1.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/Our_Employees_Are_Our_Partner_easwe4.mp4",
   },
   {
     role: "25 Years into Energy",
+    image:"/Images/a2.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/25_years_into_energry_xsxymp.mp4",
   },
   {
     role: "Company is a Group Company",
+    image:"/Images/a1.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670830/Our_Company_Is_A_Group_Company_klspkt.mp4",
   },
   {
     role: "I Am A Worker Not Owner",
+    image:"/Images/a1.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670831/I_Am_A_Worker_Not_A_Owner_rcslnv.mp4",
   },
   {
     role: "Mission & Vision",
+    image:"/Images/a2.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/Mission_And_Vision_xcrjkt.mp4",
   },
   {
     role: "We Believe in Solution",
+    image:"/Images/a1.PNG",
     reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/We_Believe_In_Solution_Based_Approach_tinnqb.mp4",
   },
 ];
@@ -68,8 +74,19 @@ const HoverVideoCard2 = () => {
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
+                  poster={reel.image}
                   className="w-full h-full object-cover"
                   playsInline
+                  onLoadStart={() => {
+                    // Ensure poster is shown when video starts loading
+                    const video = videoRefs.current[index];
+                    if (video) video.poster = reel.image;
+                  }}
+                  onCanPlay={() => {
+                    // Hide poster when video is ready to play
+                    const video = videoRefs.current[index];
+                    if (video) video.poster = '';
+                  }}
                 />
                 <button
                   onClick={() => handlePlayPause(index)}
